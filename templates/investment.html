@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="number"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Investment Page</h2>
+        <form action="/invest" method="post">
+            <label for="cname">Country Name:</label>
+            <input type="text" id="cname" name="country_name" required>
+
+            <label for="ai">AI Quantity:</label>
+            <input type="number" id="ai" name="ai" min="0" required>
+
+            <label for="gold">Gold Quantity:</label>
+            <input type="number" id="gold" name="gold" min="0" required>
+
+            <label for="lithium">Lithium Quantity:</label>
+            <input type="number" id="lithium" name="lithium" min="0" required>
+
+            <label for="manufacturing">Manufacturing Quantity:</label>
+            <input type="number" id="manufacturing" name="manufacturing" min="0" required>
+
+            <label for="tourism">Tourism Quantity:</label>
+            <input type="number" id="tourism" name="tourism" min="0" required>
+
+            <input type="submit" value="Invest">
+        </form>
+    </div>
+</body>
+</html>

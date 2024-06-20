@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asset Prices</title>
+    <style>
+        table {
+            font-size: 24px;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Asset Prices</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Asset</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for asset, price in asset_prices %}
+            <tr>
+                <td>{{ asset }}</td>
+                <td>{{ price }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
